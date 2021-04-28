@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 400rem;
+}

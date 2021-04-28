@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  siteKey: '6LfeNb0aAAAAALglrt-ZuA0AAYEFEbSB1PM5hQWn'
+  siteKey: '6Lc_SL0aAAAAAPFKN1E7gKGXcHt-socGbvG5TStn'
 };
 
 /*

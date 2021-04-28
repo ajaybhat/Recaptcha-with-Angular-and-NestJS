@@ -11,12 +11,13 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     GoogleRecaptchaModule.forRoot({
-      secretKey: process.env.SITE_KEY,
+      secretKey: '6Lc_SL0aAAAAAPEsIlO4ntOjfU-BVKFuwAOwI4ZL',
       response: (req) => req.headers.authorization,
       network: GoogleRecaptchaNetwork.Recaptcha,
       agent: null,
     }),
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({  isGlobal: true,
+    }),
   ],
   controllers: [AppController, LoginController],
   providers: [AppService],
