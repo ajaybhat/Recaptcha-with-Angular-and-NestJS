@@ -6,16 +6,17 @@ import {
   GoogleRecaptchaModule,
   GoogleRecaptchaNetwork,
 } from '@nestlab/google-recaptcha';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
     GoogleRecaptchaModule.forRoot({
-      secretKey: '6LdGGbwaAAAAAOTxm9iOQq3f2Tc2UHObC47N6MuK',
-      response: (req) => req.headers.recaptcha,
-      //skipIf: process.env.NODE_ENV !== 'production',
+      secretKey: process.env.SITE_KEY,
+      response: (req) => req.headers.authorization,
       network: GoogleRecaptchaNetwork.Recaptcha,
       agent: null,
     }),
+    ConfigModule.forRoot(),
   ],
   controllers: [AppController, LoginController],
   providers: [AppService],
